@@ -1083,5 +1083,5 @@ C-x C-f /root@127.0.0.1:/path/to/file
 
 * Theme                                                            :VINICIUS:
 #+BEGIN_SRC emacs-lisp
- '(custom-enabled-themes (quote (misterioso)))
+(load-theme 'misterioso)
 #+END_SRC
