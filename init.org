@@ -789,6 +789,7 @@ https://emacs.stackexchange.com/questions/3318/org-mode-goto-last-heading
      (shell . t)
      (python . t)
      (R . t)
+     (latex . t) ; this is the entry to activate LaTeX
      (ruby . t)
      (ocaml . t)
      (ditaa . t)
