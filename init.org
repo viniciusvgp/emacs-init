@@ -155,9 +155,14 @@ start with =C-c=:
   a try to =<h,<l,<e,<p,<m,<r,<R=,...
 * Loading files:
 ** Benefiting from org-mode's contrib
+*** Using custom org                                             :VINICIUS:
+Some instructions from lucas
+- cd ~/;
+- git clone git://orgmode.org/org-mode.git
+- cd org-mode
+- git checkout release-8.3.5 (use git tag -l to check other releases)
+- make autoloads
 #+BEGIN_SRC emacs-lisp
-;;  (add-to-list 'load-path "/usr/share/org-mode/lisp/")
-;; (add-to-list 'load-path "/home/alegrand/Work/org-mode/install/org-mode/emacs/site-lisp/org/")
 (add-to-list 'load-path "~/misc/org-mode/lisp/")
 #+END_SRC
 ** ELPA
