@@ -18,6 +18,10 @@
 #+LANGUAGE: en
 #+TAGS: LUKA(L) ARNAUD(A) WEB(W) VINICIUS(V) noexport(n)
 
+This is a copy of the /emacs/ configuration file provided by Arnaud Legrand ([2018-02-20 12:16]).
+I made some small changes to customize it with some personal settings. 
+
+*Original text from Arnaud*
 This file is my =.emacs= configuration file (more precisely my
 =~/.emacs.d/init.el= configuration). I stole it from Luka Stanisic who
 stole parts from mine a long time ago and cleaned (with org-mode) and
