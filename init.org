@@ -16,7 +16,7 @@
 #+XSLT: 
 
 #+LANGUAGE: en
-#+TAGS: LUKA(L) ARNAUD(A) WEB(W) noexport(n)
+#+TAGS: LUKA(L) ARNAUD(A) WEB(W) VINICIUS(V) noexport(n)
 
 This file is my =.emacs= configuration file (more precisely my
 =~/.emacs.d/init.el= configuration). I stole it from Luka Stanisic who
