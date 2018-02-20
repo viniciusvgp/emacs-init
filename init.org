@@ -253,7 +253,7 @@ Useful if you want to export org files in batch mode...
 #+BEGIN_SRC emacs-lisp
 ;; (set-default-font "9x15")
 ;; (set-frame-font "-1ASC-Droid Sans Mono-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1")
-(set-frame-font "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-29-*-*-*-m-0-iso10646-1")
+(set-frame-font "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-18-*-*-*-m-0-iso10646-1")
 #+END_SRC
 ** Text coloring                                                     :ARNAUD:
 #+BEGIN_SRC emacs-lisp
