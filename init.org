@@ -871,7 +871,7 @@ To use this type <m and then TAB
 To use this type <r and then TAB. This creates an R block for textual output.
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'org-structure-template-alist
-        '("r" "#+begin_src R :results output :session *R* :exports both\n\n#+end_src" "<src lang=\"R\">\n\n</src>"))
+        '("r" "#+begin_src R :results output :exports both :session *R*\n\n#+end_src" "<src lang=\"R\">\n\n</src>"))
 #+END_SRC
 
 #+RESULTS: 
