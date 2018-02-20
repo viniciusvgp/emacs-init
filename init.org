@@ -303,7 +303,7 @@ fail on mac).
 Yuck! Many people like this but I hate it as it conflicts with some of
 my other shortcuts (e.g., the ones for spelling a region).
 #+BEGIN_SRC emacs-lisp
-;; (cua-mode t)
+(cua-mode t)
 #+END_SRC
 ** Hide/show the C block:                                          :LUKA:WEB:
 #+BEGIN_SRC emacs-lisp
