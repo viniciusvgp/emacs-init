@@ -162,7 +162,7 @@ start with =C-c=:
 *** Using custom org                                             :VINICIUS:
 Some instructions from lucas
 - cd ~/;
-- git clone git://orgmode.org/org-mode.git
+- git clone https://code.orgmode.org/bzg/org-mode.git
 - cd org-mode
 - git checkout release-8.3.5 (use git tag -l to check other releases)
 - make autoloads
