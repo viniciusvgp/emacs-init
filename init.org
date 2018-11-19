@@ -787,7 +787,7 @@ https://emacs.stackexchange.com/questions/3318/org-mode-goto-last-heading
 * Org-mode + babel:
 ** Seamless use of babel (no confirmation, lazy export)              :ARNAUD:
 #+BEGIN_SRC emacs-lisp
-(setq org-export-babel-evaluate nil) ;; This is for org-mode<9. 
+;(setq org-export-babel-evaluate nil) ;; This is for org-mode<9. 
 ;;  Otherwise, you need to set #+PROPERTY: header-args :eval never-export in the beginning or your document
 (setq org-confirm-babel-evaluate nil)
 #+END_SRC
