@@ -5,6 +5,11 @@
 #+STARTUP: indent
 #+LANGUAGE:   en
 
+This is a copy of the ~emacs~ configuration file provided by Arnaud
+Legrand ([2019-03-25 16:01]).  I made some small changes to customize
+it with some personal settings.
+
+*Original text from Arnaud*
 This is a "minimal" =.emacs= configuration file. For this configuration
 to work, you'll need:
 - emacs25 (>25.2) (this way installing through elpa will save you some
