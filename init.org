@@ -332,6 +332,7 @@ Additional shortcuts for navigating through org-mode documents:
      (shell . t)
      (python . t)
      (R . t)
+     (latex .t)
      (ruby . t)
      (ocaml . t)
      (ditaa . t)
