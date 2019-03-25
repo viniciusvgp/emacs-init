@@ -372,7 +372,7 @@ To use this type <m and then TAB
 To use this type <r and then TAB. This creates an R block for textual output.
 #+begin_src emacs-lisp :tangle init.el
 (add-to-list 'org-structure-template-alist
-        '("r" "#+begin_src R :results output :session *R* :exports both\n\n#+end_src" "<src lang=\"R\">\n\n</src>"))
+        '("r" "#+begin_src R :results output :exports both :session *R*\n\n#+end_src" "<src lang=\"R\">\n\n</src>"))
 #+end_src
 
 To use this type <R and then TAB. This creates an R block for graphics
