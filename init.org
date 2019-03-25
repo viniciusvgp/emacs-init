@@ -446,3 +446,7 @@ This often fails, yielding an ugly warning, and isn't of any use in Org-mode any
 (setq python-shell-completion-native-enable nil)
 #+end_src
 
+* Theme                                                            :VINICIUS:
+#+BEGIN_SRC emacs-lisp
+(load-theme 'misterioso)
+#+END_SRC
