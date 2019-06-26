@@ -85,6 +85,12 @@ document, simply =M-x org-babel-tangle=.
 (package-initialize)
 (add-to-list 'package-archives
 		 '("melpa-stable" . "http://stable.melpa.org/packages/"))
+(add-to-list 'package-archives
+		 '("melpa" . "http://melpa.org/packages/"))
+(package-refresh-contents)
+(setq package-archive-priorities '(("gnu" . 100)
+				       ("melpa" . 5)
+                                   ("melpa-stable" . 10)))
 #+END_SRC
 * Loading files:  
 ** Loading babel: 						     :ARNAUD:
@@ -464,6 +470,6 @@ This often fails, yielding an ugly warning, and isn't of any use in Org-mode any
 #+end_src
 
 * Theme                                                            :VINICIUS:
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC emacs-lisp :tangle init.el
 (load-theme 'misterioso)
 #+END_SRC
