@@ -465,6 +465,6 @@ This often fails, yielding an ugly warning, and isn't of any use in Org-mode any
 #+end_src
 
 * Theme                                                            :VINICIUS:
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC emacs-lisp :tangle init.el
 (load-theme 'misterioso)
 #+END_SRC
