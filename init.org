@@ -92,12 +92,19 @@ document, simply =M-x org-babel-tangle=.
 #+END_SRC
 * Install missing packages
 #+begin_src emacs-lisp :tangle init.el
-(dolist (pkg '(ess
-               auctex
-               htmlize
-               exec-path-from-shell))
-  (when (not (package-installed-p pkg))
-    (package-install pkg)))
+(require 'cl)
+(let* ((required-packages
+        '(ess
+          auctex
+          htmlize
+          exec-path-from-shell))
+       (missing-packages (remove-if #'package-installed-p required-packages)))
+  (when missing-packages
+    (message "Missing packages: %s" missing-packages)
+    (package-refresh-contents)
+    (dolist (pkg missing-packages)
+      (package-install pkg)
+      (message "Package %s has been installed" pkg))))
 #+end_src
 * Import environment variables
 #+begin_src emacs-lisp :tangle init.el
