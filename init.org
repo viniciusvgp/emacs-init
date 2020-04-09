@@ -512,3 +512,7 @@ This often fails, yielding an ugly warning, and isn't of any use in Org-mode any
 #+BEGIN_SRC emacs-lisp :tangle init.el
 (load-theme 'misterioso)
 #+END_SRC
+* Reload                                                           :VINICIUS:
+#+BEGIN_SRC emacs-lisp :tangle init.el
+(org-reload)
+#+END_SRC
