@@ -1,12 +1,11 @@
 # -*- mode: org -*-
-#+TITLE:      Emacs init file written in org-mode
-#+AUTHOR:    Arnaud Legrand
-#+EMAIL:     arnaud.legrand@imag.fr
+#+TITLE:     Emacs init file written in org-mode
+#+AUTHOR:    Arnaud Legrand, Konrad Hinsen
 #+STARTUP: indent
 #+LANGUAGE:   en
 
 This is a copy of the ~emacs~ configuration file provided by Arnaud
-Legrand ([2019-11-21 17:21]).  I made some small changes to customize
+Legrand ([2020-05-25 10:31]).  I made some small changes to customize
 it with some personal settings.
 
 *Original text from Arnaud*
@@ -82,13 +81,13 @@ document, simply =M-x org-babel-tangle=.
 (add-to-list 'package-archives
 		 '("gnu" . "https://elpa.gnu.org/packages/"))
 (add-to-list 'package-archives
-		 '("melpa-stable" . "http://stable.melpa.org/packages/"))
+		 '("melpa-stable" . "https://stable.melpa.org/packages/"))
 (add-to-list 'package-archives
-		 '("melpa" . "http://melpa.org/packages/"))
+		 '("melpa" . "https://melpa.org/packages/"))
 (package-refresh-contents)
-(setq package-archive-priorities '(("gnu" . 100)
-				       ("melpa" . 5)
-                                   ("melpa-stable" . 10)))
+(setq package-archive-priorities '(("melpa-stable" . 100)
+                                   ("melpa" . 50)
+                                   ("gnu" . 10)))
 #+END_SRC
 * Install missing packages
 #+begin_src emacs-lisp :tangle init.el
@@ -105,12 +104,6 @@ document, simply =M-x org-babel-tangle=.
     (dolist (pkg missing-packages)
       (package-install pkg)
       (message "Package %s has been installed" pkg))))
-#+end_src
-* Import environment variables
-#+begin_src emacs-lisp :tangle init.el
-(unless (memq system-type '(windows-nt ms-dos))
-  (exec-path-from-shell-initialize)
-  (exec-path-from-shell-copy-env "PYTHONPATH"))
 #+end_src
 * Loading files:  
 ** Loading babel: 						     :ARNAUD:
@@ -371,6 +364,7 @@ Additional shortcuts for navigating through org-mode documents:
   (org-babel-do-load-languages
    'org-babel-load-languages
    '(
+     (emacs-lisp . t)
      (shell . t)
      (python . t)
      (R . t)
