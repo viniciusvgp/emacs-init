@@ -423,14 +423,14 @@ To use this type <m and then TAB
 To use this type <r and then TAB. This creates an R block for textual output.
 #+begin_src emacs-lisp :tangle init.el
 (rrmooc/add-org-template
- '("r" "#+begin_src R :results output :session *R* :exports both\n\n#+end_src" "<src lang=\"R\">\n\n</src>"))
+ '("r" "#+begin_src R :results output :session *R* :exports both :eval no-export\n\n#+end_src" "<src lang=\"R\">\n\n</src>"))
 #+end_src
 
 To use this type <R and then TAB. This creates an R block for graphics
 that are stored in the =/tmp/=.
 #+begin_src emacs-lisp :tangle init.el
 (rrmooc/add-org-template
- '("R" "#+begin_src R :results output graphics file :file (org-babel-temp-file \"figure\" \".png\") :exports both :width 600 :height 400 :session *R* \n\n#+end_src" "<src lang=\"R\">\n\n</src>"))
+ '("R" "#+begin_src R :results output graphics file :file (org-babel-temp-file \"figure\" \".png\") :exports both :width 600 :height 400 :session *R* :eval no-export \n\n#+end_src" "<src lang=\"R\">\n\n</src>"))
 #+end_src
 
 To use this type <RR and then TAB. This creates an R block for
@@ -438,7 +438,7 @@ graphics that are stored in the directory of the current file.
 
 #+begin_src emacs-lisp :tangle init.el
 (rrmooc/add-org-template
- '("RR" "#+begin_src R :results output graphics file :file  (org-babel-temp-file (concat (file-name-directory (or load-file-name buffer-file-name)) \"figure-\") \".png\") :exports both :width 600 :height 400 :session *R* \n\n#+end_src" "<src lang=\"R\">\n\n</src>"))
+ '("RR" "#+begin_src R :results output graphics file :file  (org-babel-temp-file (concat (file-name-directory (or load-file-name buffer-file-name)) \"figure-\") \".png\") :exports both :width 600 :height 400 :session *R* :eval no-export \n\n#+end_src" "<src lang=\"R\">\n\n</src>"))
 #+end_src
 *** Python code
 To use this type <p and then TAB
@@ -463,16 +463,16 @@ To use this type <b and then TAB
     ;; Non-session shell execution does not seem to work under Windows, so we use
     ;; a named session just like for B.
     (rrmooc/add-org-template
-     '("b" "#+begin_src shell :session session :results output :exports both\n\n#+end_src" "<src lang=\"sh\">\n\n</src>"))
+     '("b" "#+begin_src shell :session session :results output :exports both :eval no-export\n\n#+end_src" "<src lang=\"sh\">\n\n</src>"))
   (rrmooc/add-org-template
-   '("b" "#+begin_src shell :results output :exports both\n\n#+end_src" "<src lang=\"sh\">\n\n</src>")))
+   '("b" "#+begin_src shell :results output :exports both :eval no-export\n\n#+end_src" "<src lang=\"sh\">\n\n</src>")))
 #+end_src
 
 To use this type <B and then TAB. This comes with a session argument
 (e.g., in case you want to keep ssh connexions open).
 #+begin_src emacs-lisp :tangle init.el
 (rrmooc/add-org-template
- '("B" "#+begin_src shell :session *shell* :results output :exports both \n\n#+end_src" "<src lang=\"sh\">\n\n</src>"))
+ '("B" "#+begin_src shell :session *shell* :results output :exports both  :eval no-export\n\n#+end_src" "<src lang=\"sh\">\n\n</src>"))
 #+end_src
 *** Graphviz
 #+begin_src emacs-lisp :tangle init.el
