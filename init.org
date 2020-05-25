@@ -430,7 +430,7 @@ To use this type <R and then TAB. This creates an R block for graphics
 that are stored in the =/tmp/=.
 #+begin_src emacs-lisp :tangle init.el
 (rrmooc/add-org-template
- '("R" "#+begin_src R :results output graphics :file (org-babel-temp-file \"figure\" \".png\") :exports both :width 600 :height 400 :session *R* \n\n#+end_src" "<src lang=\"R\">\n\n</src>"))
+ '("R" "#+begin_src R :results output graphics file :file (org-babel-temp-file \"figure\" \".png\") :exports both :width 600 :height 400 :session *R* \n\n#+end_src" "<src lang=\"R\">\n\n</src>"))
 #+end_src
 
 To use this type <RR and then TAB. This creates an R block for
@@ -438,7 +438,7 @@ graphics that are stored in the directory of the current file.
 
 #+begin_src emacs-lisp :tangle init.el
 (rrmooc/add-org-template
- '("RR" "#+begin_src R :results output graphics :file  (org-babel-temp-file (concat (file-name-directory (or load-file-name buffer-file-name)) \"figure-\") \".png\") :exports both :width 600 :height 400 :session *R* \n\n#+end_src" "<src lang=\"R\">\n\n</src>"))
+ '("RR" "#+begin_src R :results output graphics file :file  (org-babel-temp-file (concat (file-name-directory (or load-file-name buffer-file-name)) \"figure-\") \".png\") :exports both :width 600 :height 400 :session *R* \n\n#+end_src" "<src lang=\"R\">\n\n</src>"))
 #+end_src
 *** Python code
 To use this type <p and then TAB
@@ -477,7 +477,7 @@ To use this type <B and then TAB. This comes with a session argument
 *** Graphviz
 #+begin_src emacs-lisp :tangle init.el
 (rrmooc/add-org-template
- '("g" "#+begin_src dot :results output graphics :file \"/tmp/graph.pdf\" :exports both
+ '("g" "#+begin_src dot :results output graphics file :file \"/tmp/graph.pdf\" :exports both
 digraph G {
 node [color=black,fillcolor=white,shape=rectangle,style=filled,fontname=\"Helvetica\"];
 A[label=\"A\"]
