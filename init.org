@@ -128,6 +128,7 @@ Some instructions from lucas
 - make autoloads
 #+BEGIN_SRC emacs-lisp :tangle init.el
 (add-to-list 'load-path "~/misc/org-mode/lisp/")
+(add-to-list 'load-path "~/misc/org-mode/contrib/lisp/")
 #+END_SRC
 
 * Emacs aesthetics:
