@@ -84,7 +84,7 @@ document, simply =M-x org-babel-tangle=.
 		 '("melpa-stable" . "https://stable.melpa.org/packages/"))
 (add-to-list 'package-archives
 		 '("melpa" . "https://melpa.org/packages/"))
-(package-refresh-contents)
+;; (package-refresh-contents)
 (setq package-archive-priorities '(("melpa-stable" . 100)
                                    ("melpa" . 150)
                                    ("gnu" . 10)))
