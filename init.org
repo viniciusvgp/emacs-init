@@ -515,6 +515,46 @@ This often fails, yielding an ugly warning, and isn't of any use in Org-mode any
 (setq python-shell-completion-native-enable nil)
 #+end_src
 
+* Read-only sections                                               :VINICIUS:
+Inspired from:
+https://emacs.stackexchange.com/questions/62495/how-can-i-mark-sections-of-a-very-large-org-agenda-file-as-read-only
+
+Use ~org-section-readonly~ to set current section as read only. To
+remove the tag, call ~org-section-readonly~ again. To disable this
+feature call ~org-disable-readonly~.
+
+#+begin_src emacs-lisp :tangle init.el
+(defun org-enable-readonly ()
+  (interactive)
+  (let ((buf-mod (buffer-modified-p)))
+    (org-map-entries
+     (lambda ()
+       (org-mark-subtree)
+       (add-text-properties (region-beginning) (region-end) '(read-only t)))
+     "read_only")
+    (unless buf-mod
+      (set-buffer-modified-p nil))))
+
+(defun org-disable-readonly ()
+  (interactive)
+  (let ((buf-mod (buffer-modified-p)))
+    (org-map-entries
+     (lambda ()
+       (let* ((inhibit-read-only t))
+     (org-mark-subtree)
+     (remove-text-properties (region-beginning) (region-end) '(read-only t))))
+     "read_only")
+    (unless buf-mod
+      (set-buffer-modified-p nil))))
+
+(defun org-section-readonly ()
+  (interactive)
+  (org-disable-readonly)
+  (org-toggle-tag "read_only")
+  (org-enable-readonly)
+  )
+#+end_src
+
 * Theme                                                            :VINICIUS:
 #+BEGIN_SRC emacs-lisp :tangle init.el
 (load-theme 'misterioso)
