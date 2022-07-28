@@ -561,6 +561,15 @@ feature call ~org-disable-readonly~.
 #+BEGIN_SRC emacs-lisp :tangle init.el
 (load-theme 'misterioso)
 #+END_SRC
+* Menu bars
+#+begin_src emacs-lisp :tangle init.el
+(if window-system
+    (menu-bar-mode -1)
+)
+(if window-system
+    (tool-bar-mode -1)
+)
+#+end_src
 * Reload                                                           :VINICIUS:
 #+BEGIN_SRC emacs-lisp :tangle init.el
 (org-reload)
