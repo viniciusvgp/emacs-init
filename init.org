@@ -101,6 +101,7 @@ document, simply =M-x org-babel-tangle=.
           avy
           org-ref
           cuda-mode
+	  company
           exec-path-from-shell))
        (missing-packages (remove-if #'package-installed-p required-packages)))
   (when missing-packages
