@@ -102,7 +102,7 @@ document, simply =M-x org-babel-tangle=.
           org-ref
           org-contrib
           cuda-mode
-	  company
+          company
           exec-path-from-shell))
        (missing-packages (cl-remove-if #'package-installed-p required-packages)))
   (when missing-packages
