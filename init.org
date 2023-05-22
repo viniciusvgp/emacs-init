@@ -91,7 +91,7 @@ document, simply =M-x org-babel-tangle=.
 #+END_SRC
 * Install missing packages
 #+begin_src emacs-lisp :tangle init.el
-(require 'cl)
+;(require 'cl)
 (let* ((required-packages
         '(ess
           auctex
@@ -103,7 +103,7 @@ document, simply =M-x org-babel-tangle=.
           cuda-mode
 	  company
           exec-path-from-shell))
-       (missing-packages (remove-if #'package-installed-p required-packages)))
+       (missing-packages (cl-remove-if #'package-installed-p required-packages)))
   (when missing-packages
     (message "Missing packages: %s" missing-packages)
     (package-refresh-contents)
@@ -407,8 +407,8 @@ Additional shortcuts for navigating through org-mode documents:
   (add-to-list 'org-structure-template-alist
 	       (if rrmooc/new-org-templates
 		   (cons
-		    (first old-style-template)
-		    (string-trim-right (substring (second old-style-template) 8 -9)))
+		    (cl-first old-style-template)
+		    (string-trim-right (substring (cl-second old-style-template) 8 -9)))
 		 old-style-template)))
 #+end_src
 *** With capital letters:
